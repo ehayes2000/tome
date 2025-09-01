@@ -1,0 +1,7 @@
+Commands
+    Tome -> open editor with new entry
+    This should prepop the editor with the entry!
+
+// why the fuck doesn't doc test work???
+
+don't load the whole freaking thing just load  some of it
