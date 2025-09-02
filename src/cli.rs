@@ -8,9 +8,9 @@ pub struct Args {
     #[arg(short, long)]
     pub duration: Option<String>,
     /// tag an entry with metadata
-    #[arg(short, long)]
+    #[arg(short, long, value_delimiter = ',')]
     pub tags: Option<Vec<String>>,
     /// bucket an entry in a project
     #[arg(short, long)]
-    pub projec: Option<String>,
+    pub project: Option<String>,
 }

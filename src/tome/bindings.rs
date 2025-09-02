@@ -25,7 +25,7 @@ fn try_time_from_str(s: &str) -> Result<NaiveTime, Error> {
     NaiveTime::parse_from_str(s, FORMAT_TIME).context("unable to parse time")
 }
 
-fn duration_to_string(duration: Duration) -> String {
+pub fn duration_to_string(duration: Duration) -> String {
     // TODO: this is trash
     if duration.num_days() >= 1 {
         eprintln!("unsupported duration manually correct");
@@ -34,7 +34,7 @@ fn duration_to_string(duration: Duration) -> String {
     time.format(FORMAT_DURATION).to_string()
 }
 
-fn try_duration_from_string(s: &str) -> Result<Duration, Error> {
+pub fn try_duration_from_string(s: &str) -> Result<Duration, Error> {
     let t = NaiveTime::parse_from_str(&s, FORMAT_DURATION).context("unable to parse duration")?;
     Ok(t.signed_duration_since(NaiveTime::MIN))
 }
